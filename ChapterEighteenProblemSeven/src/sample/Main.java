@@ -60,6 +60,7 @@ public class Main extends Application {
         // Map for unique word and how many time it appears
         Map<String, Integer> appearanceData = new HashMap<String, Integer>();
 //        Iterator mapIterator = appearanceData.iterator();
+        List<Integer> numberOfOccurences = new ArrayList<>();
 
         while(uniqueWordsSetIterator.hasNext())
         {
@@ -72,7 +73,8 @@ public class Main extends Application {
                     accumulator++;
                 }
             }
-            appearanceData.put(str, accumulator);
+            numberOfOccurences.add(accumulator);
+            //appearanceData.put(str, accumulator);
         }
 
 
@@ -97,8 +99,8 @@ public class Main extends Application {
 
                 pw.println("      FILE DATE      ");
                 pw.println("---------------------");
-                pw.println(appearanceData.keySet());
-                pw.println(appearanceData.values());
+                pw.println(uniqueWordsSet);
+                pw.println(numberOfOccurences);
                 pw.println(" ");
                 pw.println(" ");
                 pw.println("---------------------");
